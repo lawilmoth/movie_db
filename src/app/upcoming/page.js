@@ -1,7 +1,7 @@
 export default function App() {
   return (
     <>
-      <main> Movies! </main>
+      <main> Upcoming </main>
     </>
   );
 }
