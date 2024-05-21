@@ -1,9 +1,7 @@
-"use client";
-
 export default function App() {
   return (
     <>
-      <main> Hello </main>
+      <main> Movies! </main>
     </>
   );
 }
