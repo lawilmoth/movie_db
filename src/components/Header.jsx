@@ -1,15 +1,16 @@
 "use client";
 
-import { Button, Navbar, TextInput } from "flowbite-react";
-import { useState } from "react";
+import { Navbar, TextInput } from "flowbite-react";
+
 import { HiSearch } from "react-icons/hi";
+import { DarkThemeToggle } from "flowbite-react";
 
 export function Header() {
   return (
     <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
+      <Navbar.Brand href="/">
         <img
-          src="/favicon.svg"
+          src={"../../../public/favicon.ico"}
           className="mr-3 h-6 sm:h-9"
           alt="Flowbite React Logo"
         />
@@ -17,13 +18,6 @@ export function Header() {
           Flowbite React
         </span>
       </Navbar.Brand>
-
-      <Navbar.Toggle />
-      <Navbar.Collapse>
-        <div className="flex md:order-1">
-          <TextInput placeholder="Search..." icon={HiSearch} />
-        </div>
-      </Navbar.Collapse>
 
       <Navbar.Collapse>
         <Navbar.Link href="/" active>
@@ -33,6 +27,16 @@ export function Header() {
         <Navbar.Link href="/top-rated">Top Rated</Navbar.Link>
         <Navbar.Link href="/upcoming">Upcoming</Navbar.Link>
       </Navbar.Collapse>
+
+      <Navbar.Toggle />
+      <div className="flex">
+        <DarkThemeToggle />
+        <Navbar.Collapse>
+          <div className="flex md:order-1">
+            <TextInput placeholder="Search..." icon={HiSearch} />
+          </div>
+        </Navbar.Collapse>
+      </div>
     </Navbar>
   );
 }
